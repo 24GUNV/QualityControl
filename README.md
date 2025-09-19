@@ -1,77 +1,49 @@
-# Getting Started with Create React App
+# QualityControl
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a single Create React App-based frontend for the Battery Quality Control system. The project was flattened so the former `frontend/` app is now at the repository root.
 
-## Available Scripts
+Quick start
+1. Install dependencies:
 
-In the project directory, you can run:
+```bash
+npm install
+```
 
-### `npm start`
+2. Run development server:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+npm start
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Build for production:
 
-### `npm test`
+```bash
+npm run build
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+What is in this repo now
+- `package.json` and `node_modules/` — Node project files and dependencies
+- `src/` — React application source
+- `public/` — static public assets and `index.html`
+- `build/` — local build output (ignored by git typically)
+- `.firebase/`, `.firebaserc`, `firebase.json` — Firebase CLI local state and config (ignored)
+- `.github/` — CI/workflow definitions
 
-### `npm run build`
+Firebase configuration
+- Firebase is initialized in `src/firebase.js`. For local development, put sensitive values in `.env.local` using `REACT_APP_FIREBASE_*` names (see below). `.env.local` is in `.gitignore` by default.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Recommended environment variables (add to `.env.local`):
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- `REACT_APP_FIREBASE_API_KEY`
+- `REACT_APP_FIREBASE_AUTH_DOMAIN`
+- `REACT_APP_FIREBASE_PROJECT_ID`
+- `REACT_APP_FIREBASE_STORAGE_BUCKET`
+- `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`
+- `REACT_APP_FIREBASE_APP_ID`
+- `REACT_APP_FIREBASE_MEASUREMENT_ID`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Notes and next steps
+- `.firebase/` is ignored in `.gitignore` so local emulator state is not committed.
+- If you want to preserve separate git history for the previous nested `frontend` repo, you'd need to use `git subtree` or `git filter-repo`. I flattened the tree into the root.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-## Firebase configuration
-
-This project initializes Firebase in `src/firebase.js`. The file currently contains the Firebase config used by the app and exports `appId`, `db`, and `auth`.
-
-For production or shared repos, avoid committing secrets. Replace the hard-coded values in `src/firebase.js` with environment variables (for example using `.env` and `process.env.REACT_APP_*`) and re-export them from that file.
-
+If you want me to run a build or wire additional CI, say which command you want me to run next.

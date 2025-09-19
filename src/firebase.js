@@ -2,6 +2,8 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
 
+
+
 // Firebase configuration: prefer environment variables from `.env.local`
 // Use the `REACT_APP_` prefix so Create React App exposes them at build time.
 const firebaseConfig = {
