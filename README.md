@@ -1,6 +1,8 @@
 # QualityControl
 
-This repository contains a single Create React App-based frontend for the Battery Quality Control system. The project was flattened so the former `frontend/` app is now at the repository root.
+This repository contains a single Create React App-based frontend for the Battery Quality Control system. 
+
+Deployment link: https://battery-qc-system.web.app/
 
 Quick start
 1. Install dependencies:
