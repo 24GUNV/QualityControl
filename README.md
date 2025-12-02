@@ -2,6 +2,10 @@
 
 This repository contains a single Create React App-based frontend for the Battery Quality Control system. 
 
+<img width="1160" height="679" alt="image" src="https://github.com/user-attachments/assets/24dda691-bb62-403a-9d1d-64c1869d0507" />
+<img width="1136" height="647" alt="image" src="https://github.com/user-attachments/assets/7c58f544-0efd-4b35-bd3d-6b45779debd9" />
+
+
 Deployment link: https://battery-qc-system.web.app/
 
 Quick start
